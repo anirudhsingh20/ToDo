@@ -31,7 +31,7 @@
     <div class="col-12" *ngFor="let todoItem of todoList;let i = index">
       <div class="shadow-sm todo-item px-3 py-2 my-1 bg-white">
         <strong class="text-muted">{{i + 1}}. &nbsp;</strong>
-        <p class="w-75 pt-md-1">{{todoItem.todoText}}</p>
+        <p class="w-75 pt-md-1 pt-0">{{todoItem.todoText}}</p>
         <button (click)="updateTodo(todoItem)" class="btn btn-link"><i class="bi bi-pen"></i></button>
         <button (click)="onTodoDelete(todoItem)" class="btn btn-link btn-delete"><i class="bi bi-trash-fill"></i></button>
       </div>

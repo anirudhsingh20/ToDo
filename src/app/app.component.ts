@@ -46,11 +46,13 @@ export class AppComponent implements OnInit {
   }
 
   updateTodo(todoItem: todoListItem) {
-    this.isUpdateTodo = true;
     this.todoToUpdate = todoItem;
     this.todoForm.patchValue({
       'todoText':this.todoToUpdate.todoText
     })
+    this.isUpdateTodo = true;
+    this.cdr.detectChanges();
+
   }
 
   onUpdateTodo() {
@@ -67,6 +69,8 @@ export class AppComponent implements OnInit {
       this.todoToUpdate = null;
       this.todoForm.reset()
     }
+    this.cdr.detectChanges();
+
   }
 
   onCancel(){
