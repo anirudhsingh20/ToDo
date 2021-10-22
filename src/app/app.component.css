@@ -1,0 +1,13 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-delete {
+  color: red;
+}
+
+.btn-delete:hover {
+  color: rgb(224, 37, 37);
+}
